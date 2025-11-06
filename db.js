@@ -7,7 +7,8 @@ const mongoURL = process.env.MONGODB_URL;
 
 // ✅ Just pass the URL — no need for deprecated options
 mongoose.connect(mongoURL, {
-    serverSelectionTimeoutMS: 10000,
+    useNewUrlParser: true,
+  useUnifiedTopology: true,
 });
 
 const db = mongoose.connection;
